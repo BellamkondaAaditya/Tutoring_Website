@@ -1,0 +1,66 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    /* Deep rich dark blue-grey background */
+    --background: 228 20% 7%;
+    --foreground: 210 40% 98%;
+
+    --card: 228 20% 9%;
+    --card-foreground: 210 40% 98%;
+
+    --popover: 228 20% 9%;
+    --popover-foreground: 210 40% 98%;
+
+    /* Vivid electric blue for primary accents */
+    --primary: 215 100% 55%;
+    --primary-foreground: 0 0% 100%;
+
+    /* Premium gold/amber for secondary accents (highlights IB excellence and Warwick colors) */
+    --secondary: 43 96% 56%;
+    --secondary-foreground: 228 20% 7%;
+
+    --muted: 228 20% 15%;
+    --muted-foreground: 215 20.2% 65.1%;
+
+    --accent: 215 100% 55%;
+    --accent-foreground: 0 0% 100%;
+
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 228 20% 15%;
+    --input: 228 20% 15%;
+    --ring: 215 100% 55%;
+
+    --radius: 0.75rem;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground antialiased;
+    font-family: 'Outfit', sans-serif;
+  }
+}
+
+/* Custom premium utility classes */
+@layer utilities {
+  .text-glow {
+    text-shadow: 0 0 20px theme('colors.primary.DEFAULT / 30%');
+  }
+
+  .text-glow-secondary {
+    text-shadow: 0 0 20px theme('colors.secondary.DEFAULT / 40%');
+  }
+
+  .bg-grid-white {
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32' width='32' height='32' fill='none' stroke='rgb(255 255 255 / 0.04)'%3e%3cpath d='M0 .5H31.5V32'/%3e%3c/svg%3e");
+  }
+}
